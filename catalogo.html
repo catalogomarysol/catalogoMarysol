@@ -1,0 +1,616 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catálogo</title>
+<style>
+  body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    background: #111;
+    color: #eee;
+  }
+  header {
+    padding: 16px 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    padding: 0 16px 24px;
+  }
+  .card {
+    background: #181818;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.4);
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+  }
+  .caption {
+    padding: 8px 10px;
+    font-size: 12px;
+    color: #bbb;
+    text-align: center;
+  }
+  dialog { width: 95vw; max-width: 1200px; border:none; padding:0; background: transparent; }
+  dialog::backdrop { background: rgba(0,0,0,.9); }
+  .lightbox { display: flex; justify-content: center; align-items: center; height: 100vh; }
+  .lightbox img { max-width: 95vw; max-height: 95vh; object-fit: contain; border-radius: 8px; }
+  .close {
+    position:absolute; top:8px; right:8px; background:#000a; color:#fff;
+    border:none; border-radius:10px; padding:8px 10px; cursor:pointer; font-size:14px;
+  }
+</style>
+</head>
+<body>
+<header>Catálogo</header>
+<div class="grid">    <div class="card">
+      <img src="miniaturas/009_mini.jpg" alt="009" onclick="openLb('img/009.jpg')">
+      <div class="caption">009</div>
+    </div>    <div class="card">
+      <img src="miniaturas/010_mini.jpg" alt="010" onclick="openLb('img/010.jpg')">
+      <div class="caption">010</div>
+    </div>    <div class="card">
+      <img src="miniaturas/011_mini.jpg" alt="011" onclick="openLb('img/011.jpg')">
+      <div class="caption">011</div>
+    </div>    <div class="card">
+      <img src="miniaturas/013_mini.jpg" alt="013" onclick="openLb('img/013.jpg')">
+      <div class="caption">013</div>
+    </div>    <div class="card">
+      <img src="miniaturas/014_mini.jpg" alt="014" onclick="openLb('img/014.jpg')">
+      <div class="caption">014</div>
+    </div>    <div class="card">
+      <img src="miniaturas/015_mini.jpg" alt="015" onclick="openLb('img/015.jpg')">
+      <div class="caption">015</div>
+    </div>    <div class="card">
+      <img src="miniaturas/016_mini.jpg" alt="016" onclick="openLb('img/016.jpg')">
+      <div class="caption">016</div>
+    </div>    <div class="card">
+      <img src="miniaturas/017_mini.jpg" alt="017" onclick="openLb('img/017.jpg')">
+      <div class="caption">017</div>
+    </div>    <div class="card">
+      <img src="miniaturas/018_mini.jpg" alt="018" onclick="openLb('img/018.jpg')">
+      <div class="caption">018</div>
+    </div>    <div class="card">
+      <img src="miniaturas/019_mini.jpg" alt="019" onclick="openLb('img/019.jpg')">
+      <div class="caption">019</div>
+    </div>    <div class="card">
+      <img src="miniaturas/020_mini.jpg" alt="020" onclick="openLb('img/020.jpg')">
+      <div class="caption">020</div>
+    </div>    <div class="card">
+      <img src="miniaturas/021_mini.jpg" alt="021" onclick="openLb('img/021.jpg')">
+      <div class="caption">021</div>
+    </div>    <div class="card">
+      <img src="miniaturas/022_mini.jpg" alt="022" onclick="openLb('img/022.jpg')">
+      <div class="caption">022</div>
+    </div>    <div class="card">
+      <img src="miniaturas/023_mini.jpg" alt="023" onclick="openLb('img/023.jpg')">
+      <div class="caption">023</div>
+    </div>    <div class="card">
+      <img src="miniaturas/024_mini.jpg" alt="024" onclick="openLb('img/024.jpg')">
+      <div class="caption">024</div>
+    </div>    <div class="card">
+      <img src="miniaturas/025_mini.jpg" alt="025" onclick="openLb('img/025.jpg')">
+      <div class="caption">025</div>
+    </div>    <div class="card">
+      <img src="miniaturas/026_mini.jpg" alt="026" onclick="openLb('img/026.jpg')">
+      <div class="caption">026</div>
+    </div>    <div class="card">
+      <img src="miniaturas/027_mini.jpg" alt="027" onclick="openLb('img/027.jpg')">
+      <div class="caption">027</div>
+    </div>    <div class="card">
+      <img src="miniaturas/028_mini.jpg" alt="028" onclick="openLb('img/028.jpg')">
+      <div class="caption">028</div>
+    </div>    <div class="card">
+      <img src="miniaturas/029_mini.jpg" alt="029" onclick="openLb('img/029.jpg')">
+      <div class="caption">029</div>
+    </div>    <div class="card">
+      <img src="miniaturas/030_mini.jpg" alt="030" onclick="openLb('img/030.jpg')">
+      <div class="caption">030</div>
+    </div>    <div class="card">
+      <img src="miniaturas/031_mini.jpg" alt="031" onclick="openLb('img/031.jpg')">
+      <div class="caption">031</div>
+    </div>    <div class="card">
+      <img src="miniaturas/032_mini.jpg" alt="032" onclick="openLb('img/032.jpg')">
+      <div class="caption">032</div>
+    </div>    <div class="card">
+      <img src="miniaturas/033_mini.jpg" alt="033" onclick="openLb('img/033.jpg')">
+      <div class="caption">033</div>
+    </div>    <div class="card">
+      <img src="miniaturas/034_mini.jpg" alt="034" onclick="openLb('img/034.jpg')">
+      <div class="caption">034</div>
+    </div>    <div class="card">
+      <img src="miniaturas/035_mini.jpg" alt="035" onclick="openLb('img/035.jpg')">
+      <div class="caption">035</div>
+    </div>    <div class="card">
+      <img src="miniaturas/036_mini.jpg" alt="036" onclick="openLb('img/036.jpg')">
+      <div class="caption">036</div>
+    </div>    <div class="card">
+      <img src="miniaturas/037_mini.jpg" alt="037" onclick="openLb('img/037.jpg')">
+      <div class="caption">037</div>
+    </div>    <div class="card">
+      <img src="miniaturas/038_mini.jpg" alt="038" onclick="openLb('img/038.jpg')">
+      <div class="caption">038</div>
+    </div>    <div class="card">
+      <img src="miniaturas/039_mini.jpg" alt="039" onclick="openLb('img/039.jpg')">
+      <div class="caption">039</div>
+    </div>    <div class="card">
+      <img src="miniaturas/040_mini.jpg" alt="040" onclick="openLb('img/040.jpg')">
+      <div class="caption">040</div>
+    </div>    <div class="card">
+      <img src="miniaturas/041_mini.jpg" alt="041" onclick="openLb('img/041.jpg')">
+      <div class="caption">041</div>
+    </div>    <div class="card">
+      <img src="miniaturas/042_mini.jpg" alt="042" onclick="openLb('img/042.jpg')">
+      <div class="caption">042</div>
+    </div>    <div class="card">
+      <img src="miniaturas/043_mini.jpg" alt="043" onclick="openLb('img/043.jpg')">
+      <div class="caption">043</div>
+    </div>    <div class="card">
+      <img src="miniaturas/044_mini.jpg" alt="044" onclick="openLb('img/044.jpg')">
+      <div class="caption">044</div>
+    </div>    <div class="card">
+      <img src="miniaturas/045_mini.jpg" alt="045" onclick="openLb('img/045.jpg')">
+      <div class="caption">045</div>
+    </div>    <div class="card">
+      <img src="miniaturas/046_mini.jpg" alt="046" onclick="openLb('img/046.jpg')">
+      <div class="caption">046</div>
+    </div>    <div class="card">
+      <img src="miniaturas/047_mini.jpg" alt="047" onclick="openLb('img/047.jpg')">
+      <div class="caption">047</div>
+    </div>    <div class="card">
+      <img src="miniaturas/048_mini.jpg" alt="048" onclick="openLb('img/048.jpg')">
+      <div class="caption">048</div>
+    </div>    <div class="card">
+      <img src="miniaturas/049_mini.jpg" alt="049" onclick="openLb('img/049.jpg')">
+      <div class="caption">049</div>
+    </div>    <div class="card">
+      <img src="miniaturas/050_mini.jpg" alt="050" onclick="openLb('img/050.jpg')">
+      <div class="caption">050</div>
+    </div>    <div class="card">
+      <img src="miniaturas/051_mini.jpg" alt="051" onclick="openLb('img/051.jpg')">
+      <div class="caption">051</div>
+    </div>    <div class="card">
+      <img src="miniaturas/052_mini.jpg" alt="052" onclick="openLb('img/052.jpg')">
+      <div class="caption">052</div>
+    </div>    <div class="card">
+      <img src="miniaturas/053_mini.jpg" alt="053" onclick="openLb('img/053.jpg')">
+      <div class="caption">053</div>
+    </div>    <div class="card">
+      <img src="miniaturas/054_mini.jpg" alt="054" onclick="openLb('img/054.jpg')">
+      <div class="caption">054</div>
+    </div>    <div class="card">
+      <img src="miniaturas/055_mini.jpg" alt="055" onclick="openLb('img/055.jpg')">
+      <div class="caption">055</div>
+    </div>    <div class="card">
+      <img src="miniaturas/056_mini.jpg" alt="056" onclick="openLb('img/056.jpg')">
+      <div class="caption">056</div>
+    </div>    <div class="card">
+      <img src="miniaturas/057_mini.jpg" alt="057" onclick="openLb('img/057.jpg')">
+      <div class="caption">057</div>
+    </div>    <div class="card">
+      <img src="miniaturas/058_mini.jpg" alt="058" onclick="openLb('img/058.jpg')">
+      <div class="caption">058</div>
+    </div>    <div class="card">
+      <img src="miniaturas/059_mini.jpg" alt="059" onclick="openLb('img/059.jpg')">
+      <div class="caption">059</div>
+    </div>    <div class="card">
+      <img src="miniaturas/060_mini.jpg" alt="060" onclick="openLb('img/060.jpg')">
+      <div class="caption">060</div>
+    </div>    <div class="card">
+      <img src="miniaturas/061_mini.jpg" alt="061" onclick="openLb('img/061.jpg')">
+      <div class="caption">061</div>
+    </div>    <div class="card">
+      <img src="miniaturas/062_mini.jpg" alt="062" onclick="openLb('img/062.jpg')">
+      <div class="caption">062</div>
+    </div>    <div class="card">
+      <img src="miniaturas/063_mini.jpg" alt="063" onclick="openLb('img/063.jpg')">
+      <div class="caption">063</div>
+    </div>    <div class="card">
+      <img src="miniaturas/064_mini.jpg" alt="064" onclick="openLb('img/064.jpg')">
+      <div class="caption">064</div>
+    </div>    <div class="card">
+      <img src="miniaturas/065_mini.jpg" alt="065" onclick="openLb('img/065.jpg')">
+      <div class="caption">065</div>
+    </div>    <div class="card">
+      <img src="miniaturas/066_mini.jpg" alt="066" onclick="openLb('img/066.jpg')">
+      <div class="caption">066</div>
+    </div>    <div class="card">
+      <img src="miniaturas/067_mini.jpg" alt="067" onclick="openLb('img/067.jpg')">
+      <div class="caption">067</div>
+    </div>    <div class="card">
+      <img src="miniaturas/068_mini.jpg" alt="068" onclick="openLb('img/068.jpg')">
+      <div class="caption">068</div>
+    </div>    <div class="card">
+      <img src="miniaturas/070_mini.jpg" alt="070" onclick="openLb('img/070.jpg')">
+      <div class="caption">070</div>
+    </div>    <div class="card">
+      <img src="miniaturas/071_mini.jpg" alt="071" onclick="openLb('img/071.jpg')">
+      <div class="caption">071</div>
+    </div>    <div class="card">
+      <img src="miniaturas/072_mini.jpg" alt="072" onclick="openLb('img/072.jpg')">
+      <div class="caption">072</div>
+    </div>    <div class="card">
+      <img src="miniaturas/073_mini.jpg" alt="073" onclick="openLb('img/073.jpg')">
+      <div class="caption">073</div>
+    </div>    <div class="card">
+      <img src="miniaturas/074_mini.jpg" alt="074" onclick="openLb('img/074.jpg')">
+      <div class="caption">074</div>
+    </div>    <div class="card">
+      <img src="miniaturas/075_mini.jpg" alt="075" onclick="openLb('img/075.jpg')">
+      <div class="caption">075</div>
+    </div>    <div class="card">
+      <img src="miniaturas/076_mini.jpg" alt="076" onclick="openLb('img/076.jpg')">
+      <div class="caption">076</div>
+    </div>    <div class="card">
+      <img src="miniaturas/077_mini.jpg" alt="077" onclick="openLb('img/077.jpg')">
+      <div class="caption">077</div>
+    </div>    <div class="card">
+      <img src="miniaturas/078_mini.jpg" alt="078" onclick="openLb('img/078.jpg')">
+      <div class="caption">078</div>
+    </div>    <div class="card">
+      <img src="miniaturas/079_mini.jpg" alt="079" onclick="openLb('img/079.jpg')">
+      <div class="caption">079</div>
+    </div>    <div class="card">
+      <img src="miniaturas/080_mini.jpg" alt="080" onclick="openLb('img/080.jpg')">
+      <div class="caption">080</div>
+    </div>    <div class="card">
+      <img src="miniaturas/081_mini.jpg" alt="081" onclick="openLb('img/081.jpg')">
+      <div class="caption">081</div>
+    </div>    <div class="card">
+      <img src="miniaturas/082_mini.jpg" alt="082" onclick="openLb('img/082.jpg')">
+      <div class="caption">082</div>
+    </div>    <div class="card">
+      <img src="miniaturas/083_mini.jpg" alt="083" onclick="openLb('img/083.jpg')">
+      <div class="caption">083</div>
+    </div>    <div class="card">
+      <img src="miniaturas/084_mini.jpg" alt="084" onclick="openLb('img/084.jpg')">
+      <div class="caption">084</div>
+    </div>    <div class="card">
+      <img src="miniaturas/085_mini.jpg" alt="085" onclick="openLb('img/085.jpg')">
+      <div class="caption">085</div>
+    </div>    <div class="card">
+      <img src="miniaturas/086_mini.jpg" alt="086" onclick="openLb('img/086.jpg')">
+      <div class="caption">086</div>
+    </div>    <div class="card">
+      <img src="miniaturas/087_mini.jpg" alt="087" onclick="openLb('img/087.jpg')">
+      <div class="caption">087</div>
+    </div>    <div class="card">
+      <img src="miniaturas/088_mini.jpg" alt="088" onclick="openLb('img/088.jpg')">
+      <div class="caption">088</div>
+    </div>    <div class="card">
+      <img src="miniaturas/089_mini.jpg" alt="089" onclick="openLb('img/089.jpg')">
+      <div class="caption">089</div>
+    </div>    <div class="card">
+      <img src="miniaturas/090_mini.jpg" alt="090" onclick="openLb('img/090.jpg')">
+      <div class="caption">090</div>
+    </div>    <div class="card">
+      <img src="miniaturas/091_mini.jpg" alt="091" onclick="openLb('img/091.jpg')">
+      <div class="caption">091</div>
+    </div>    <div class="card">
+      <img src="miniaturas/092_mini.jpg" alt="092" onclick="openLb('img/092.jpg')">
+      <div class="caption">092</div>
+    </div>    <div class="card">
+      <img src="miniaturas/093_mini.jpg" alt="093" onclick="openLb('img/093.jpg')">
+      <div class="caption">093</div>
+    </div>    <div class="card">
+      <img src="miniaturas/094_mini.jpg" alt="094" onclick="openLb('img/094.jpg')">
+      <div class="caption">094</div>
+    </div>    <div class="card">
+      <img src="miniaturas/095_mini.jpg" alt="095" onclick="openLb('img/095.jpg')">
+      <div class="caption">095</div>
+    </div>    <div class="card">
+      <img src="miniaturas/096_mini.jpg" alt="096" onclick="openLb('img/096.jpg')">
+      <div class="caption">096</div>
+    </div>    <div class="card">
+      <img src="miniaturas/097_mini.jpg" alt="097" onclick="openLb('img/097.jpg')">
+      <div class="caption">097</div>
+    </div>    <div class="card">
+      <img src="miniaturas/098_mini.jpg" alt="098" onclick="openLb('img/098.jpg')">
+      <div class="caption">098</div>
+    </div>    <div class="card">
+      <img src="miniaturas/099_mini.jpg" alt="099" onclick="openLb('img/099.jpg')">
+      <div class="caption">099</div>
+    </div>    <div class="card">
+      <img src="miniaturas/100_mini.jpg" alt="100" onclick="openLb('img/100.jpg')">
+      <div class="caption">100</div>
+    </div>    <div class="card">
+      <img src="miniaturas/101_mini.jpg" alt="101" onclick="openLb('img/101.jpg')">
+      <div class="caption">101</div>
+    </div>    <div class="card">
+      <img src="miniaturas/102_mini.jpg" alt="102" onclick="openLb('img/102.jpg')">
+      <div class="caption">102</div>
+    </div>    <div class="card">
+      <img src="miniaturas/103_mini.jpg" alt="103" onclick="openLb('img/103.jpg')">
+      <div class="caption">103</div>
+    </div>    <div class="card">
+      <img src="miniaturas/104_mini.jpg" alt="104" onclick="openLb('img/104.jpg')">
+      <div class="caption">104</div>
+    </div>    <div class="card">
+      <img src="miniaturas/105_mini.jpg" alt="105" onclick="openLb('img/105.jpg')">
+      <div class="caption">105</div>
+    </div>    <div class="card">
+      <img src="miniaturas/106_mini.jpg" alt="106" onclick="openLb('img/106.jpg')">
+      <div class="caption">106</div>
+    </div>    <div class="card">
+      <img src="miniaturas/107_mini.jpg" alt="107" onclick="openLb('img/107.jpg')">
+      <div class="caption">107</div>
+    </div>    <div class="card">
+      <img src="miniaturas/108_mini.jpg" alt="108" onclick="openLb('img/108.jpg')">
+      <div class="caption">108</div>
+    </div>    <div class="card">
+      <img src="miniaturas/109_mini.jpg" alt="109" onclick="openLb('img/109.jpg')">
+      <div class="caption">109</div>
+    </div>    <div class="card">
+      <img src="miniaturas/110_mini.jpg" alt="110" onclick="openLb('img/110.jpg')">
+      <div class="caption">110</div>
+    </div>    <div class="card">
+      <img src="miniaturas/111_mini.jpg" alt="111" onclick="openLb('img/111.jpg')">
+      <div class="caption">111</div>
+    </div>    <div class="card">
+      <img src="miniaturas/112_mini.jpg" alt="112" onclick="openLb('img/112.jpg')">
+      <div class="caption">112</div>
+    </div>    <div class="card">
+      <img src="miniaturas/113_mini.jpg" alt="113" onclick="openLb('img/113.jpg')">
+      <div class="caption">113</div>
+    </div>    <div class="card">
+      <img src="miniaturas/114_mini.jpg" alt="114" onclick="openLb('img/114.jpg')">
+      <div class="caption">114</div>
+    </div>    <div class="card">
+      <img src="miniaturas/115_mini.jpg" alt="115" onclick="openLb('img/115.jpg')">
+      <div class="caption">115</div>
+    </div>    <div class="card">
+      <img src="miniaturas/116_mini.jpg" alt="116" onclick="openLb('img/116.jpg')">
+      <div class="caption">116</div>
+    </div>    <div class="card">
+      <img src="miniaturas/117_mini.jpg" alt="117" onclick="openLb('img/117.jpg')">
+      <div class="caption">117</div>
+    </div>    <div class="card">
+      <img src="miniaturas/118_mini.jpg" alt="118" onclick="openLb('img/118.jpg')">
+      <div class="caption">118</div>
+    </div>    <div class="card">
+      <img src="miniaturas/119_mini.jpg" alt="119" onclick="openLb('img/119.jpg')">
+      <div class="caption">119</div>
+    </div>    <div class="card">
+      <img src="miniaturas/120_mini.jpg" alt="120" onclick="openLb('img/120.jpg')">
+      <div class="caption">120</div>
+    </div>    <div class="card">
+      <img src="miniaturas/121_mini.jpg" alt="121" onclick="openLb('img/121.jpg')">
+      <div class="caption">121</div>
+    </div>    <div class="card">
+      <img src="miniaturas/122_mini.jpg" alt="122" onclick="openLb('img/122.jpg')">
+      <div class="caption">122</div>
+    </div>    <div class="card">
+      <img src="miniaturas/123_mini.jpg" alt="123" onclick="openLb('img/123.jpg')">
+      <div class="caption">123</div>
+    </div>    <div class="card">
+      <img src="miniaturas/124_mini.jpg" alt="124" onclick="openLb('img/124.jpg')">
+      <div class="caption">124</div>
+    </div>    <div class="card">
+      <img src="miniaturas/125_mini.jpg" alt="125" onclick="openLb('img/125.jpg')">
+      <div class="caption">125</div>
+    </div>    <div class="card">
+      <img src="miniaturas/126_mini.jpg" alt="126" onclick="openLb('img/126.jpg')">
+      <div class="caption">126</div>
+    </div>    <div class="card">
+      <img src="miniaturas/127_mini.jpg" alt="127" onclick="openLb('img/127.jpg')">
+      <div class="caption">127</div>
+    </div>    <div class="card">
+      <img src="miniaturas/128_mini.jpg" alt="128" onclick="openLb('img/128.jpg')">
+      <div class="caption">128</div>
+    </div>    <div class="card">
+      <img src="miniaturas/129_mini.jpg" alt="129" onclick="openLb('img/129.jpg')">
+      <div class="caption">129</div>
+    </div>    <div class="card">
+      <img src="miniaturas/130_mini.jpg" alt="130" onclick="openLb('img/130.jpg')">
+      <div class="caption">130</div>
+    </div>    <div class="card">
+      <img src="miniaturas/131_mini.jpg" alt="131" onclick="openLb('img/131.jpg')">
+      <div class="caption">131</div>
+    </div>    <div class="card">
+      <img src="miniaturas/132_mini.jpg" alt="132" onclick="openLb('img/132.jpg')">
+      <div class="caption">132</div>
+    </div>    <div class="card">
+      <img src="miniaturas/133_mini.jpg" alt="133" onclick="openLb('img/133.jpg')">
+      <div class="caption">133</div>
+    </div>    <div class="card">
+      <img src="miniaturas/134_mini.jpg" alt="134" onclick="openLb('img/134.jpg')">
+      <div class="caption">134</div>
+    </div>    <div class="card">
+      <img src="miniaturas/135_mini.jpg" alt="135" onclick="openLb('img/135.jpg')">
+      <div class="caption">135</div>
+    </div>    <div class="card">
+      <img src="miniaturas/136_mini.jpg" alt="136" onclick="openLb('img/136.jpg')">
+      <div class="caption">136</div>
+    </div>    <div class="card">
+      <img src="miniaturas/137_mini.jpg" alt="137" onclick="openLb('img/137.jpg')">
+      <div class="caption">137</div>
+    </div>    <div class="card">
+      <img src="miniaturas/138_mini.jpg" alt="138" onclick="openLb('img/138.jpg')">
+      <div class="caption">138</div>
+    </div>    <div class="card">
+      <img src="miniaturas/139_mini.jpg" alt="139" onclick="openLb('img/139.jpg')">
+      <div class="caption">139</div>
+    </div>    <div class="card">
+      <img src="miniaturas/140_mini.jpg" alt="140" onclick="openLb('img/140.jpg')">
+      <div class="caption">140</div>
+    </div>    <div class="card">
+      <img src="miniaturas/141_mini.jpg" alt="141" onclick="openLb('img/141.jpg')">
+      <div class="caption">141</div>
+    </div>    <div class="card">
+      <img src="miniaturas/142_mini.jpg" alt="142" onclick="openLb('img/142.jpg')">
+      <div class="caption">142</div>
+    </div>    <div class="card">
+      <img src="miniaturas/143_mini.jpg" alt="143" onclick="openLb('img/143.jpg')">
+      <div class="caption">143</div>
+    </div>    <div class="card">
+      <img src="miniaturas/144_mini.jpg" alt="144" onclick="openLb('img/144.jpg')">
+      <div class="caption">144</div>
+    </div>    <div class="card">
+      <img src="miniaturas/145_mini.jpg" alt="145" onclick="openLb('img/145.jpg')">
+      <div class="caption">145</div>
+    </div>    <div class="card">
+      <img src="miniaturas/146_mini.jpg" alt="146" onclick="openLb('img/146.jpg')">
+      <div class="caption">146</div>
+    </div>    <div class="card">
+      <img src="miniaturas/147_mini.jpg" alt="147" onclick="openLb('img/147.jpg')">
+      <div class="caption">147</div>
+    </div>    <div class="card">
+      <img src="miniaturas/148_mini.jpg" alt="148" onclick="openLb('img/148.jpg')">
+      <div class="caption">148</div>
+    </div>    <div class="card">
+      <img src="miniaturas/149_mini.jpg" alt="149" onclick="openLb('img/149.jpg')">
+      <div class="caption">149</div>
+    </div>    <div class="card">
+      <img src="miniaturas/150_mini.jpg" alt="150" onclick="openLb('img/150.jpg')">
+      <div class="caption">150</div>
+    </div>    <div class="card">
+      <img src="miniaturas/151_mini.jpg" alt="151" onclick="openLb('img/151.jpg')">
+      <div class="caption">151</div>
+    </div>    <div class="card">
+      <img src="miniaturas/152_mini.jpg" alt="152" onclick="openLb('img/152.jpg')">
+      <div class="caption">152</div>
+    </div>    <div class="card">
+      <img src="miniaturas/153_mini.jpg" alt="153" onclick="openLb('img/153.jpg')">
+      <div class="caption">153</div>
+    </div>    <div class="card">
+      <img src="miniaturas/154_mini.jpg" alt="154" onclick="openLb('img/154.jpg')">
+      <div class="caption">154</div>
+    </div>    <div class="card">
+      <img src="miniaturas/155_mini.jpg" alt="155" onclick="openLb('img/155.jpg')">
+      <div class="caption">155</div>
+    </div>    <div class="card">
+      <img src="miniaturas/156_mini.jpg" alt="156" onclick="openLb('img/156.jpg')">
+      <div class="caption">156</div>
+    </div>    <div class="card">
+      <img src="miniaturas/157_mini.jpg" alt="157" onclick="openLb('img/157.jpg')">
+      <div class="caption">157</div>
+    </div>    <div class="card">
+      <img src="miniaturas/158_mini.jpg" alt="158" onclick="openLb('img/158.jpg')">
+      <div class="caption">158</div>
+    </div>    <div class="card">
+      <img src="miniaturas/159_mini.jpg" alt="159" onclick="openLb('img/159.jpg')">
+      <div class="caption">159</div>
+    </div>    <div class="card">
+      <img src="miniaturas/161_mini.jpg" alt="161" onclick="openLb('img/161.jpg')">
+      <div class="caption">161</div>
+    </div>    <div class="card">
+      <img src="miniaturas/162_mini.jpg" alt="162" onclick="openLb('img/162.jpg')">
+      <div class="caption">162</div>
+    </div>    <div class="card">
+      <img src="miniaturas/163_mini.jpg" alt="163" onclick="openLb('img/163.jpg')">
+      <div class="caption">163</div>
+    </div>    <div class="card">
+      <img src="miniaturas/164_mini.jpg" alt="164" onclick="openLb('img/164.jpg')">
+      <div class="caption">164</div>
+    </div>    <div class="card">
+      <img src="miniaturas/165_mini.jpg" alt="165" onclick="openLb('img/165.jpg')">
+      <div class="caption">165</div>
+    </div>    <div class="card">
+      <img src="miniaturas/166_mini.jpg" alt="166" onclick="openLb('img/166.jpg')">
+      <div class="caption">166</div>
+    </div>    <div class="card">
+      <img src="miniaturas/167_mini.jpg" alt="167" onclick="openLb('img/167.jpg')">
+      <div class="caption">167</div>
+    </div>    <div class="card">
+      <img src="miniaturas/168_mini.jpg" alt="168" onclick="openLb('img/168.jpg')">
+      <div class="caption">168</div>
+    </div>    <div class="card">
+      <img src="miniaturas/169_mini.jpg" alt="169" onclick="openLb('img/169.jpg')">
+      <div class="caption">169</div>
+    </div>    <div class="card">
+      <img src="miniaturas/170_mini.jpg" alt="170" onclick="openLb('img/170.jpg')">
+      <div class="caption">170</div>
+    </div>    <div class="card">
+      <img src="miniaturas/171_mini.jpg" alt="171" onclick="openLb('img/171.jpg')">
+      <div class="caption">171</div>
+    </div>    <div class="card">
+      <img src="miniaturas/172_mini.jpg" alt="172" onclick="openLb('img/172.jpg')">
+      <div class="caption">172</div>
+    </div>    <div class="card">
+      <img src="miniaturas/173_mini.jpg" alt="173" onclick="openLb('img/173.jpg')">
+      <div class="caption">173</div>
+    </div>    <div class="card">
+      <img src="miniaturas/174_mini.jpg" alt="174" onclick="openLb('img/174.jpg')">
+      <div class="caption">174</div>
+    </div>    <div class="card">
+      <img src="miniaturas/175_mini.jpg" alt="175" onclick="openLb('img/175.jpg')">
+      <div class="caption">175</div>
+    </div>    <div class="card">
+      <img src="miniaturas/176_mini.jpg" alt="176" onclick="openLb('img/176.jpg')">
+      <div class="caption">176</div>
+    </div>    <div class="card">
+      <img src="miniaturas/177_mini.jpg" alt="177" onclick="openLb('img/177.jpg')">
+      <div class="caption">177</div>
+    </div>    <div class="card">
+      <img src="miniaturas/178_mini.jpg" alt="178" onclick="openLb('img/178.jpg')">
+      <div class="caption">178</div>
+    </div>    <div class="card">
+      <img src="miniaturas/179_mini.jpg" alt="179" onclick="openLb('img/179.jpg')">
+      <div class="caption">179</div>
+    </div>    <div class="card">
+      <img src="miniaturas/180_mini.jpg" alt="180" onclick="openLb('img/180.jpg')">
+      <div class="caption">180</div>
+    </div>    <div class="card">
+      <img src="miniaturas/181_mini.jpg" alt="181" onclick="openLb('img/181.jpg')">
+      <div class="caption">181</div>
+    </div>    <div class="card">
+      <img src="miniaturas/182_mini.jpg" alt="182" onclick="openLb('img/182.jpg')">
+      <div class="caption">182</div>
+    </div>    <div class="card">
+      <img src="miniaturas/183_mini.jpg" alt="183" onclick="openLb('img/183.jpg')">
+      <div class="caption">183</div>
+    </div>    <div class="card">
+      <img src="miniaturas/184_mini.jpg" alt="184" onclick="openLb('img/184.jpg')">
+      <div class="caption">184</div>
+    </div>    <div class="card">
+      <img src="miniaturas/185_mini.jpg" alt="185" onclick="openLb('img/185.jpg')">
+      <div class="caption">185</div>
+    </div>    <div class="card">
+      <img src="miniaturas/186_mini.jpg" alt="186" onclick="openLb('img/186.jpg')">
+      <div class="caption">186</div>
+    </div>    <div class="card">
+      <img src="miniaturas/187_mini.jpg" alt="187" onclick="openLb('img/187.jpg')">
+      <div class="caption">187</div>
+    </div>    <div class="card">
+      <img src="miniaturas/188_mini.jpg" alt="188" onclick="openLb('img/188.jpg')">
+      <div class="caption">188</div>
+    </div>    <div class="card">
+      <img src="miniaturas/189_mini.jpg" alt="189" onclick="openLb('img/189.jpg')">
+      <div class="caption">189</div>
+    </div>    <div class="card">
+      <img src="miniaturas/190_mini.jpg" alt="190" onclick="openLb('img/190.jpg')">
+      <div class="caption">190</div>
+    </div>    <div class="card">
+      <img src="miniaturas/flor_mini.png" alt="flor" onclick="openLb('img/flor_mini.png')">
+      <div class="caption">flor</div>
+    </div></div>
+
+<dialog id="lb">
+  <div class="lightbox">
+    <button class="close" onclick="document.getElementById('lb').close()">✕</button>
+    <img id="lbImg" src="" alt="">
+  </div>
+</dialog>
+
+<script>
+function openLb(src){
+  const d = document.getElementById('lb');
+  const img = document.getElementById('lbImg');
+  img.src = src;
+  d.showModal();
+}
+</script>
+
+</body>
+</html>
