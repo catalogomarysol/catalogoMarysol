@@ -1,9 +1,43 @@
-﻿<!doctype html><html lang="es"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+﻿<!doctype html><html lang='es'><head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>Pendientes Artesanales Marysol — Pág. 23</title>
 <style>
   body{margin:0;font-family:system-ui,Arial;background:#111;color:#eee}
-  header{padding:16px 20px;font-size:1.4rem;font-weight:600;text-align:center}
+  header{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:16px 20px;font-size:1.4rem;font-weight:600;text-align:center;
+    flex-wrap:wrap;gap:10px;
+  }
+
+  .contact-icons{
+    display:flex;gap:12px;align-items:center;
+  }
+  .contact-icons a{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:38px;height:38px;border-radius:50%;
+    background:rgba(255,255,255,0.1);
+    color:#0af;font-size:18px;text-decoration:none;
+    position:relative;transition:background 0.3s,transform 0.2s;
+  }
+  .contact-icons a.whatsapp{color:#25D366;}
+  .contact-icons a:hover{background:rgba(255,255,255,0.25);transform:scale(1.1)}
+
+  .contact-icons a::after{
+    content:attr(title);
+    position:absolute;bottom:-28px;left:50%;transform:translateX(-50%);
+    background:#000;color:#fff;font-size:12px;padding:4px 8px;
+    border-radius:4px;opacity:0;pointer-events:none;
+    transition:opacity 0.3s;
+    white-space:nowrap;
+  }
+  .contact-icons a:hover::after{opacity:0.9;}
+
+  @media(max-width:600px){
+    header{flex-direction:column;font-size:1.2rem;text-align:center;}
+    .contact-icons{justify-content:center;margin-top:5px;}
+  }
+
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding:10px 16px 30px}
   .card{background:#181818;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.4)}
   .card img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#000;padding:4px;display:block;cursor:pointer}
@@ -13,47 +47,70 @@
   .lightbox{display:flex;justify-content:center;align-items:center;height:100vh}
   .lightbox img{max-width:95vw;max-height:95vh;object-fit:contain;border-radius:8px}
   .close{position:absolute;top:8px;right:8px;background:#000a;color:#fff;border:none;border-radius:10px;padding:8px 10px;cursor:pointer;font-size:14px}
-  .nav{text-align:center;padding:20px;font-size:1.1rem}
-  .nav a{color:#0af;text-decoration:none;margin:0 6px}
-  .nav span{color:#fff;font-weight:bold;margin:0 6px}
+
+  /* === Navegación adaptativa (sin barra horizontal) === */
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:6px;
+    padding:20px;
+    font-size:1.1rem;
+  }
+  .nav a{color:#0af;text-decoration:none;}
+  .nav span{color:#fff;font-weight:bold;}
 </style></head><body>
-<header>Pendientes Artesanales Marysol — pág: 23</header>
-<div class="grid">  <div class="card">
-    <img src="miniaturas/224_mini.jpg" alt="224" onclick="openLb('img/224.jpg')">
-    <div class="caption">224</div>
-  </div>  <div class="card">
-    <img src="miniaturas/225_mini.jpg" alt="225" onclick="openLb('img/225.jpg')">
-    <div class="caption">225</div>
-  </div>  <div class="card">
-    <img src="miniaturas/226_mini.jpg" alt="226" onclick="openLb('img/226.jpg')">
-    <div class="caption">226</div>
-  </div>  <div class="card">
-    <img src="miniaturas/227_mini.jpg" alt="227" onclick="openLb('img/227.jpg')">
-    <div class="caption">227</div>
-  </div>  <div class="card">
-    <img src="miniaturas/228_mini.jpg" alt="228" onclick="openLb('img/228.jpg')">
-    <div class="caption">228</div>
-  </div>  <div class="card">
-    <img src="miniaturas/229_mini.jpg" alt="229" onclick="openLb('img/229.jpg')">
-    <div class="caption">229</div>
-  </div>  <div class="card">
-    <img src="miniaturas/230_mini.jpg" alt="230" onclick="openLb('img/230.jpg')">
-    <div class="caption">230</div>
-  </div>  <div class="card">
-    <img src="miniaturas/231_mini.jpg" alt="231" onclick="openLb('img/231.jpg')">
-    <div class="caption">231</div>
-  </div>  <div class="card">
-    <img src="miniaturas/232_mini.jpg" alt="232" onclick="openLb('img/232.jpg')">
-    <div class="caption">232</div>
-  </div>  <div class="card">
-    <img src="miniaturas/233_mini.jpg" alt="233" onclick="openLb('img/233.jpg')">
-    <div class="caption">233</div>
+
+<header>
+  <span>Pendientes Artesanales Marysol — pág: 23</span>
+  <div class='contact-icons'>
+    <a href='mailto:marisafernandezcalderon@hotmail.com' class='email' title='Email'>📧</a>
+    <a href='https://wa.me/34637905688' target='_blank' class='whatsapp' title='WhatsApp'>💬</a>
+  </div>
+</header>
+
+<div class='grid'>  <div class='card'>
+    <img src='miniaturas/224_mini.jpg' alt='224' onclick='openLb("img/224.jpg")'>
+    <div class='caption'>224</div>
+  </div>  <div class='card'>
+    <img src='miniaturas/225_mini.jpg' alt='225' onclick='openLb("img/225.jpg")'>
+    <div class='caption'>225</div>
+  </div>  <div class='card'>
+    <img src='miniaturas/226_mini.jpg' alt='226' onclick='openLb("img/226.jpg")'>
+    <div class='caption'>226</div>
+  </div>  <div class='card'>
+    <img src='miniaturas/227_mini.jpg' alt='227' onclick='openLb("img/227.jpg")'>
+    <div class='caption'>227</div>
+  </div>  <div class='card'>
+    <img src='miniaturas/228_mini.jpg' alt='228' onclick='openLb("img/228.jpg")'>
+    <div class='caption'>228</div>
+  </div>  <div class='card'>
+    <img src='miniaturas/229_mini.jpg' alt='229' onclick='openLb("img/229.jpg")'>
+    <div class='caption'>229</div>
+  </div>  <div class='card'>
+    <img src='miniaturas/230_mini.jpg' alt='230' onclick='openLb("img/230.jpg")'>
+    <div class='caption'>230</div>
+  </div>  <div class='card'>
+    <img src='miniaturas/231_mini.jpg' alt='231' onclick='openLb("img/231.jpg")'>
+    <div class='caption'>231</div>
+  </div>  <div class='card'>
+    <img src='miniaturas/232_mini.jpg' alt='232' onclick='openLb("img/232.jpg")'>
+    <div class='caption'>232</div>
+  </div>  <div class='card'>
+    <img src='miniaturas/233_mini.jpg' alt='233' onclick='openLb("img/233.jpg")'>
+    <div class='caption'>233</div>
   </div></div>
 <div class='nav'><a href='catalogo_1.html'>1</a><a href='catalogo_2.html'>2</a><a href='catalogo_3.html'>3</a><a href='catalogo_4.html'>4</a><a href='catalogo_5.html'>5</a><a href='catalogo_6.html'>6</a><a href='catalogo_7.html'>7</a><a href='catalogo_8.html'>8</a><a href='catalogo_9.html'>9</a><a href='catalogo_10.html'>10</a><a href='catalogo_11.html'>11</a><a href='catalogo_12.html'>12</a><a href='catalogo_13.html'>13</a><a href='catalogo_14.html'>14</a><a href='catalogo_15.html'>15</a><a href='catalogo_16.html'>16</a><a href='catalogo_17.html'>17</a><a href='catalogo_18.html'>18</a><a href='catalogo_19.html'>19</a><a href='catalogo_20.html'>20</a><a href='catalogo_21.html'>21</a><a href='catalogo_22.html'>22</a><span>23</span><a href='catalogo_24.html'>24</a><a href='catalogo_25.html'>25</a><a href='catalogo_26.html'>26</a><a href='catalogo_27.html'>27</a><a href='catalogo_28.html'>28</a><a href='catalogo_29.html'>29</a><a href='catalogo_30.html'>30</a><a href='catalogo_31.html'>31</a><a href='catalogo_32.html'>32</a><a href='catalogo_33.html'>33</a><a href='catalogo_34.html'>34</a><a href='catalogo_35.html'>35</a><a href='catalogo_36.html'>36</a><a href='catalogo_37.html'>37</a> | <a href='index.html'>Inicio</a></div>
-<dialog id="lb"><div class="lightbox">
-<button class="close" onclick="document.getElementById('lb').close()">X</button>
-<img id="lbImg" src="" alt=""></div></dialog>
+<dialog id='lb'><div class='lightbox'>
+<button class='close' onclick='document.getElementById("lb").close()'>X</button>
+<img id='lbImg' src='' alt=''>
+</div></dialog>
 <script>
-function openLb(src){const d=document.getElementById('lb');const img=document.getElementById('lbImg');img.src=src;d.showModal();}
+function openLb(src){
+  const d=document.getElementById('lb');
+  const img=document.getElementById('lbImg');
+  img.src=src;
+  d.showModal();
+}
 </script>
 </body></html>
